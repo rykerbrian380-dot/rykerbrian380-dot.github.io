@@ -100,13 +100,18 @@
   <main class="card">
     <h1>My First Cool Website</h1>
     <p>This is my first glowing website, published with GitHub Pages.</p>
+    <p id="count">Launch count: 0</p>
     <button onclick="changeText()">Launch</button>
     <button onclick="toggleTheme()">Theme</button>
   </main>
 
   <script>
+    let launchCount = 0;
+
     function changeText() {
+      launchCount = launchCount + 1;
       document.querySelector("p").textContent = "System launched. Welcome aboard.";
+      document.querySelector("#count").textContent = "Launch count: " + launchCount;
     }
    function toggleTheme() {
       document.body.classList.toggle("light");
