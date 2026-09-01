@@ -1,98 +1,95 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.6">
-  <style type="text/css">
-    span.s1 {font-kerning: none}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Neon Website</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(0, 245, 255, 0.36), transparent 30%),
+        radial-gradient(circle at 82% 75%, rgba(255, 43, 214, 0.34), transparent 32%),
+        #080a14;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -25%;
+      background:
+        conic-gradient(from 90deg, transparent, rgba(0, 245, 255, 0.24), transparent, rgba(255, 43, 214, 0.24), transparent);
+      filter: blur(42px);
+      animation: glow 10s infinite linear;
+      z-index: -1;
+    }
+
+    .card {
+      width: min(720px, 86vw);
+      padding: 42px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 0 60px rgba(0, 245, 255, 0.25);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(42px, 8vw, 86px);
+      margin: 0;
+      text-shadow: 0 0 24px #00f5ff;
+      letter-spacing: 0;
+    }
+
+    p {
+      font-size: 20px;
+      color: #dbeafe;
+      line-height: 1.6;
+    }
+
+    button {
+      margin-top: 18px;
+      padding: 14px 24px;
+      border: 0;
+      color: #07111f;
+      background: #00f5ff;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 28px #00f5ff;
+    }
+
+    @keyframes glow {
+      from {
+        transform: rotate(0deg) scale(1);
+      }
+
+      to {
+        transform: rotate(360deg) scale(1.12);
+      }
+    }
   </style>
 </head>
 <body>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>&lt;!DOCTYPE html&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>&lt;html lang="en"&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>&lt;head&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;title&gt;My Neon Website&lt;/title&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;style&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>body {</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>margin: 0;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>min-height: 100vh;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>display: grid;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>place-items: center;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>background: #080a14;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>color: white;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>overflow: hidden;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"><b></b></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>body::before {</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>content: "";</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>position: fixed;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>inset: -20%;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>background:</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">        </span>radial-gradient(circle at 20% 20%, #00f5ff, transparent 28%),</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">        </span>radial-gradient(circle at 80% 75%, #ff2bd6, transparent 28%);</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>filter: blur(20px);</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>animation: glow 8s infinite alternate ease-in-out;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>z-index: -1;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"><b></b></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>.card {</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>width: min(720px, 86vw);</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>padding: 42px;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>border: 1px solid rgba(255,255,255,.2);</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>background: rgba(255,255,255,.08);</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>backdrop-filter: blur(18px);</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>box-shadow: 0 0 60px rgba(0,245,255,.25);</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>text-align: center;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"><b></b></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>h1 {</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: clamp(42px, 8vw, 86px);</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>margin: 0;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>text-shadow: 0 0 24px #00f5ff;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"><b></b></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>p {</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 20px;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>color: #dbeafe;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>line-height: 1.6;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"><b></b></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>button {</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>margin-top: 18px;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>padding: 14px 24px;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>border: 0;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>color: #07111f;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>background: #00f5ff;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>font-weight: bold;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>cursor: pointer;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>box-shadow: 0 0 28px #00f5ff;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"><b></b></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>@keyframes glow {</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>from { transform: scale(1) rotate(0deg); }</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>to { transform: scale(1.15) rotate(8deg); }</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;/style&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>&lt;/head&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>&lt;body&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;main class="card"&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>&lt;h1&gt;Hello Future&lt;/h1&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>&lt;p&gt;This is my first glowing website, published with GitHub Pages.&lt;/p&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>&lt;button onclick="changeText()"&gt;Click me&lt;/button&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;/main&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000; min-height: 29.0px"><span class="s1"><b></b></span><br></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;script&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>function changeText() {</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>document.querySelector("p").textContent = "Nice. You just made the page interactive.";</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;/script&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>&lt;/body&gt;</b></span></h1>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>&lt;/html&gt;</b></span></h1>
+  <main class="card">
+    <h1>Hello Future</h1>
+    <p>This is my first glowing website, published with GitHub Pages.</p>
+    <button onclick="changeText()">Click me</button>
+  </main>
+
+  <script>
+    function changeText() {
+      document.querySelector("p").textContent = "Nice. You just made the page interactive.";
+    }
+  </script>
 </body>
 </html>
