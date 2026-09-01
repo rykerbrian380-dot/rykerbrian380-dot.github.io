@@ -99,21 +99,30 @@
 <body>
   <main class="card">
     <h1>My First Cool Website</h1>
-    <p>This is my first glowing website, published with GitHub Pages.</p>
+    <p id="message">This is my first glowing website, published with GitHub Pages.</p>
     <p id="count">Launch count: 0</p>
     <button onclick="changeText()">Launch</button>
+    <button onclick="resetPage()">Reset</button>
     <button onclick="toggleTheme()">Theme</button>
   </main>
 
   <script>
+    const defaultMessage = "This is my first glowing website, published with GitHub Pages.";
     let launchCount = 0;
 
     function changeText() {
       launchCount = launchCount + 1;
-      document.querySelector("p").textContent = "System launched. Welcome aboard.";
+      document.querySelector("#message").textContent = "System launched. Welcome aboard.";
       document.querySelector("#count").textContent = "Launch count: " + launchCount;
     }
-   function toggleTheme() {
+
+    function resetPage() {
+      launchCount = 0;
+      document.querySelector("#message").textContent = defaultMessage;
+      document.querySelector("#count").textContent = "Launch count: 0";
+    }
+
+    function toggleTheme() {
       document.body.classList.toggle("light");
     }
   </script>
