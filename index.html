@@ -125,6 +125,12 @@
     function toggleTheme() {
       document.body.classList.toggle("light");
     }
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key.toLowerCase() === "l") {
+        changeText();
+      }
+    });
   </script>
 </body>
 </html>
