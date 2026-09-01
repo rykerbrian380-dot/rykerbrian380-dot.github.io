@@ -67,6 +67,23 @@
       cursor: pointer;
       box-shadow: 0 0 28px #ff2bd6;
     }
+    .light {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(255, 43, 214, 0.18), transparent 30%),
+    radial-gradient(circle at 82% 75%, rgba(0, 245, 255, 0.18), transparent 32%),
+    #f8fafc;
+  color: #07111f;
+}
+
+.light .card {
+  background: rgba(255, 255, 255, 0.76);
+  border-color: rgba(7, 17, 31, 0.14);
+  box-shadow: 0 0 48px rgba(255, 43, 214, 0.2);
+}
+
+.light p {
+  color: #334155;
+}
 
     @keyframes glow {
       from {
@@ -84,11 +101,15 @@
     <h1>My First Cool Website</h1>
     <p>This is my first glowing website, published with GitHub Pages.</p>
     <button onclick="changeText()">Launch</button>
+    <button onclick="toggleTheme()">Theme</button>
   </main>
 
   <script>
     function changeText() {
       document.querySelector("p").textContent = "System launched. Welcome aboard.";
+    }
+   function toggleTheme() {
+      document.body.classList.toggle("light");
     }
   </script>
 </body>
